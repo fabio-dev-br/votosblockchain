@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="1200.0">
+         <children>
+            <Pane id="topBar" prefHeight="60.0" prefWidth="1200.0" stylesheets="@../Style/style.css">
+               <children>
+                  <Label layoutX="45.0" layoutY="20.0" text="Voting" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="20.0" text="Blockchain" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="1150.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/menu.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="536.0" layoutY="25.0" text="Horário Oficial: " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="hora" layoutX="651.0" layoutY="25.0" text="00:00:00" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="890.0" layoutY="25.0" text="Minas Gerais, Brazil" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="300.0" layoutY="25.0" text="Data:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="data" layoutX="350.0" layoutY="25.0" text="00-00-0000" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="860.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/location.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="passwordLabel" prefHeight="600.0" prefWidth="1200.0">
+               <children>
+                  <Label layoutX="540.0" layoutY="565.0" text="© 2018, Victor Tanabe" textFill="#8f8f8f">
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="300.0" layoutY="550.0" prefHeight="15.0" prefWidth="600.0" />
+                  <Label id="signInText2" layoutX="470.0" layoutY="85.0" stylesheets="@../Style/style.css" text="Cadastro de Eleitor" textFill="#5c5c5c">
+                     <font>
+                        <Font name="Megan June" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField id="fieldLogin" fx:id="nomeEleitorLabel" layoutX="100.0" layoutY="250.0" prefHeight="25.0" prefWidth="450.0" promptText="Nome Completo" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Separator layoutX="300.0" layoutY="150.0" prefHeight="4.0" prefWidth="600.0" />
+                  <Button fx:id="ConfirmaCadastroButton" contentDisplay="CENTER" layoutX="550.0" layoutY="480.0" mnemonicParsing="false" onAction="#confirmaCadastroAction" prefHeight="35.0" prefWidth="100.0" scaleX="1.2" scaleY="1.2" text="Confirmar">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField id="fieldLogin" fx:id="codigoEleitorLabel" layoutX="100.0" layoutY="200.0" prefHeight="25.0" prefWidth="450.0" promptText="Código do Eleitor" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fieldLogin" fx:id="naturalidadeLabel" layoutX="100.0" layoutY="400.0" prefHeight="25.0" prefWidth="450.0" promptText="Naturalidade" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fieldLogin" fx:id="situacaoLabel" layoutX="650.0" layoutY="300.0" prefHeight="25.0" prefWidth="450.0" promptText="Situação" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fieldLogin" fx:id="emailLabel" layoutX="650.0" layoutY="350.0" prefHeight="25.0" prefWidth="450.0" promptText="Email" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField id="fieldLogin" fx:id="passwordlabel" layoutX="650.0" layoutY="400.0" prefHeight="25.0" prefWidth="450.0" promptText="Senha" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField id="fieldLogin" fx:id="nomePaiLabel" layoutX="100.0" layoutY="300.0" prefHeight="25.0" prefWidth="450.0" promptText="Nome Completo do Pai" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fieldLogin" fx:id="nomeMaeLabel" layoutX="100.0" layoutY="350.0" prefHeight="25.0" prefWidth="450.0" promptText="Nome Completo da Mãe" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fieldLogin" fx:id="dataNascLabel" layoutX="650.0" layoutY="250.0" prefHeight="25.0" prefWidth="200.0" promptText="Data Nascimento (dd/mm/aaaa)" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fieldLogin" fx:id="dataEmissaoLabel" layoutX="880.0" layoutY="250.0" prefHeight="25.0" prefWidth="220.0" promptText="Data Emissão Título (dd/mm/aaaa)" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="fieldLogin" fx:id="sexualidadeLabel" layoutX="650.0" layoutY="200.0" prefHeight="25.0" prefWidth="450.0" promptText="Sexualidade" stylesheets="@../Style/style.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Accordion />
+            <Accordion />
+         </children>
+      </AnchorPane>
+      <Accordion layoutX="10.0" layoutY="10.0" />
+   </children>
+</AnchorPane>
